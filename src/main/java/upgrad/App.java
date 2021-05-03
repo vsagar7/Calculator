@@ -9,11 +9,11 @@ public class App {
         Calculator calculator = (Calculator) applicationContext.getBean("calculator");
 
         calculator.compute("+",3,5);
-        //calculator.compute("-",3,5);
-        //calculator.compute("*",3,5);
-        //calculator.compute("/",3,5);
+        calculator.compute("-",3,5);
+        calculator.compute("*",3,5);
+        calculator.compute("/",3,5);
 
-        calculator.compute("%",3,5);
+        //calculator.compute("%",3,5);
 
 
     }
