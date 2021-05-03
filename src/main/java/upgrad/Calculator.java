@@ -11,13 +11,17 @@ public class Calculator {
     AdditionService additionService;
     
     //Setter based Ingestion
-    @Autowired
-    public void setAdditionService(AdditionService additionService){
-            this.additionService=additionService;
-    }
+//    @Autowired
+//    public void setAdditionService(AdditionService additionService){
+//            this.additionService=additionService;
+//    }
 
 
     //Constructor based Ingestion
+    @Autowired
+    public Calculator(AdditionService additionService){
+        this.additionService=additionService;
+    }
 
     public void compute(String operation,int x,int y) throws Exception {
         //if(operation.equalsIgnoreCase("+")||operation.equalsIgnoreCase("-")||
