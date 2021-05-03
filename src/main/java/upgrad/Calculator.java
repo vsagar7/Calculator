@@ -6,8 +6,18 @@ import org.springframework.stereotype.Component;
 @Component
 public class Calculator {
 
-    @Autowired
+    //field based Ingestion
+    //@Autowired
     AdditionService additionService;
+    
+    //Setter based Ingestion
+    @Autowired
+    public void setAdditionService(AdditionService additionService){
+            this.additionService=additionService;
+    }
+
+
+    //Constructor based Ingestion
 
     public void compute(String operation,int x,int y) throws Exception {
         //if(operation.equalsIgnoreCase("+")||operation.equalsIgnoreCase("-")||
